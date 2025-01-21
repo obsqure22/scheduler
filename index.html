@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulatore Scheduler</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Includere il CSS -->
+</head>
+<body>
+    <div class="scheduler-config">
+        <h1>Configurazione Scheduler</h1>
+        <label for="num-processi">Numero di Processi:</label>
+        <input type="number" id="num-processi" value="10" min="1">
+
+        <label for="durata-massima">Durata Massima:</label>
+        <input type="number" id="durata-massima" value="10" min="1">
+
+        <label for="arrivo-massimo">Arrivo Massimo:</label>
+        <input type="number" id="arrivo-massimo" value="10" min="1">
+
+        <label for="quantum">Tempo Quantum:</label>
+        <input type="number" id="quantum" value="2" min="1">
+
+        <label for="clock">Clock (ms):</label>
+        <input type="number" id="clock" value="100" min="1">
+
+        <label for="priorita-massima">Priorità Massima:</label>
+        <input type="number" id="priorita-massima" value="10" min="1">
+
+        <label for="algoritmo">Algoritmo di Scheduling:</label>
+        <select id="algoritmo">
+            <option>Round Robin</option>
+            <option>FCFS</option>
+            <option>SRTF</option>
+            <option>Priorità</option>
+        </select>
+
+        <button onclick="creaProcessi()">Crea</button>
+        <button onclick="avviaSimulazione()">Avvia Simulazione</button>
+        <button onclick="fermaSimulazione()">Ferma Simulazione</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Includere il JavaScript -->
+</body>
+</html>
