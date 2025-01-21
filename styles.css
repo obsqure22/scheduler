@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*COLORI DEL SITO*/
+:root {
+
+
+    --body-color: white;
+
+    --section1-color: rgb(255 255 255 / 100%);
+
+    --spans-color: #272727;
+
+    --shadows-color: rgba(0, 0, 0, 0.356);
+
+    --noborderbuttons-color: black;
+
+    --headings-color: #040404;
+
+    --paragraphs-color: #717171;
+
+    --headershadow-color: rgba(0, 0, 0, 0.06);
+
+    --container1-color: rgb(238, 238, 238);
+
+    --tabletd-color: rgb(238, 238, 238);
+
+    --tableth-color: #dadada;
+
+    --border-color: #747474;
+
+    --container1dec-color: #d3d3d3;
+
+    --labels-color: rgb(0, 0, 0);
+
+    /* undefined --seventh-color: rgba(247, 253, 255, 0.96);*/
+
+    --inputselect-color: rgb(236, 236, 236);
+
+    --inputmod-color: rgb(238, 238, 238);
+
+    --textsinlabel-color: rgba(56, 56, 56, 0.753);
+
+    --coloredtd-color: rgba(255, 82, 82, 0.96);
+
+    --initialbords-color: black;
+
+
+}
+
+.dark-theme {
+    --body-color: rgb(27, 27, 27);
+
+    --section1-color: rgb(40, 40, 40);
+
+    --spans-color: #ececec;
+
+    --shadows-color: rgba(255, 255, 255, 0.589);
+
+    --noborderbuttons-color: white;
+
+    --headings-color: #d1d1d1;
+
+    --paragraphs-color: #818181;
+
+    --headershadow-color: rgba(56, 56, 56, 0.973);
+
+    --container1-color: rgb(54 54 54);
+
+    --tabletd-color: rgb(54 54 54);
+
+    --tableth-color: #2d2d2d;
+
+    --border-color: #b1b1b1;
+
+    --container1dec-color: #2d2d2d;
+
+    --labels-color: rgb(246, 246, 246);
+
+    /*--seventh-color: rgba(23, 24, 24, 0.96);*/
+
+    --inputselect-color: #2d2d2d;
+
+    --inputmod-color: rgb(54 54 54);
+
+    --textsinlabel-color: rgba(255, 255, 255, 0.63);
+
+    --coloredtd-color: rgba(131, 23, 23, 0.96);
+
+    --initialbords-color: #ffffff;
+
+
+}
+
+/* Generali */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: var(--body-color);
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--headings-color);
+    user-select: none;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--headings-color);
+    user-select: none;
+
+}
+
+h3 {
+    user-select: none;
+    color: var(--headings-color);
+}
+
+h4 {
+    font-size: 20px;
+    color: var(--headings-color);
+    user-select: none;
+
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--headings-color);
+    user-select: none;
+
+}
+
+p {
+    font-size: 17px;
+    color: var(--paragraphs-color);
+    margin: 15px 0 20px 0;
+    user-select: none;
+
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3 ease;
+    user-select: none;
+    color: var(--spans-color);
+
+}
+
+th,
+td {
+    user-select: none;
+
+}
+
+
+hr {
+    border: none;
+    border-top: 0.5px solid #404040;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    user-select: none;
+
+}
+
+label {
+    font-weight: 600;
+    margin-left: 2vh;
+    user-select: none;
+
+}
+
+span {
+    user-select: none;
+    color: var(--spans-color);
+}
+
+
+img {
+    user-select: none;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+
+
+
+
+
+/*INTESTAZIONE*/
+
+
+
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: var(--body-color);
+    box-shadow: 0 5px 15px var(--headershadow-color);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+}
+
+.logo {
+    width: 50px;
+}
+
+
+
+.Profili {
+    position: relative;
+    height: 50px;
+    width: 82.5px;
+    transition: 0.4s ease;
+}
+
+.pfp {
+    width: 50px;
+    position: absolute;
+}
+
+.nome {
+    position: absolute;
+    opacity: 0;
+    top: 15%;
+    font-weight: bold;
+    font-size: 15px;
+    color: #040404;
+    white-space: nowrap;
+    transition: 0.4s ease;
+    padding-left: 55px;
+}
+
+.Profili:hover {
+    width: 422.5px;
+}
+
+.Profili:hover img[id="Enrico"] {
+    left: 0%;
+}
+
+.Profili:hover span[id="Enricos"] {
+    opacity: 100%;
+}
+
+.Profili:hover img[id="Salvatore"] {
+    left: 50%;
+}
+
+.Profili:hover span[id="Salvatore"] {
+    left: 50%;
+    opacity: 100%;
+}
+
+img[id="Salvatore"] {
+    left: 35%;
+    transition: 0.4s ease-out;
+}
+
+.devs {
+    position: absolute;
+    top: 50%;
+    font-size: 12.5px;
+    padding-left: 55px;
+    opacity: 0;
+    transition: 0.4s ease-out;
+    white-space: nowrap;
+}
+
+
+.headerleft {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navbar span {
+    color: var(--spans-color);
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 15px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: var(--spans-color);
+    text-shadow: 0px 0px 4px var(--shadows-color);
+    font-weight: 700;
+}
+
+
+
+#header .checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+#header .checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .fa-moon {
+    color: #f1c40f;
+}
+
+#header .fa-sun {
+    color: #f39c12;
+}
+
+#header .checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+
+#header .checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+#header .checkbox-label .ball:hover {
+    transition: 0.3s ease;
+    background-color: rgba(238, 0, 0, 0.96);
+    ;
+}
+
+
+
+/*FORM PRINCIPALE*/
+
+#FormS {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--section1-color);
+    padding: 20px;
+    transition: 0.3s ease;
+    min-width: 100%;
+}
+
+
+#FormS h2 {
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 10px;
+}
+
+#FormS p {
+    text-align: center;
+    padding-bottom: 5px;
+    margin-left: 10px;
+
+}
+
+#FormS .banner {
+    position: absolute;
+    width: 80px;
+    left: 10%;
+    top: -2%;
+}
+
+
+#FormS .Title {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#FormS .Title span[class="Title-container"] {
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 0px 0px 2px var(--shadows-color);
+
+}
+
+
+#FormS label {
+    color: var(--labels-color);
+    font-size: 18px;
+    text-align: left;
+
+}
+
+#FormS input {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    border: 2.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3 ease;
+    background-color: var(--inputselect-color);
+    color: var(--textsinlabel-color);
+    margin-left: 30%;
+
+
+}
+
+
+#FormS select {
+    width: 70%;
+    height: 40px;
+
+    border: 2.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3 ease;
+    background-color: var(--inputselect-color);
+    color: var(--textsinlabel-color);
+    margin-left: 30%;
+    appearance: none;
+    text-align: center;
+
+}
+
+#FormS .checkbox-container {
+    position: relative;
+    width: 70%;
+    margin-left: 30%;
+}
+
+#FormS input[id="check-24 preemtive"] {
+    position: relative;
+    opacity: 0%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#FormS .sphere {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #5e5e5e;
+    z-index: 1;
+
+}
+
+#FormS span.check {
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: rgb(247, 247, 247);
+
+}
+
+#FormS input[id="check-24 preemtive"]:checked+.sphere {
+    background-color: black;
+}
+
+#FormS input[id="check-24 preemtive"]:checked+.sphere+span.check {
+    opacity: 1;
+}
+
+
+
+#FormS button {
+    position: absolute;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(209, 0, 0, 0.96);
+    color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#FormS button[class="Alert"] {
+    margin-left: 90%;
+    margin-right: 10%;
+    background: none;
+    font-size: 20px;
+    color: var(--headings-color);
+}
+
+
+#FormS button[class="Sliders"] {
+    margin-right: 90%;
+    margin-left: 10%;
+    background: none;
+    font-size: 20px;
+    color: var(--headings-color);
+
+}
+
+#FormS button[class="Sliders"]:hover {
+    background: none;
+    text-shadow: 0px 0px 4px var(--shadows-color);
+    color: var(--noborderbuttons-color);
+    box-shadow: none;
+}
+
+#FormS button[class="Alert"]:hover {
+    background: none;
+    text-shadow: 0px 0px 4px var(--shadows-color);
+    color: var(--noborderbuttons-color);
+    box-shadow: none;
+}
+
+#FormS button[id="Center-button"] {
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+#FormS .Buttons-2:hover button[id="Sx-button"] {
+    margin-right: 120px;
+    width: 40px;
+    height: 40px;
+}
+
+#FormS .Buttons-2:hover button[id="Dx-button"] {
+    margin-left: 120px;
+    width: 40px;
+    height: 40px;
+}
+
+#FormS button:disabled {
+    background-color: rgba(150, 150, 150, 0.96);
+}
+
+#FormS button:hover:disabled {
+    box-shadow: none;
+    background-color: rgba(150, 150, 150, 0.96);
+    color: rgb(235, 234, 234);
+}
+
+#FormS button:hover {
+    box-shadow: 0 0 10px rgba(168, 0, 0, 0.96);
+    background-color: rgba(156, 0, 0, 0.96);
+    color: rgb(235, 234, 234);
+}
+
+#FormS .Workspace {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto auto;
+}
+
+
+#FormS .container {
+    background-color: var(--container1-color);
+    position: relative;
+    height: 70vh;
+    display: grid;
+    grid-row: 1 / 3;
+    border-radius: 15px;
+    gap: 0.25rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px 20px;
+    padding-bottom: 100px;
+    padding-top: 80px;
+    align-content: space-evenly;
+    align-items: center;
+    margin-right: 10px;
+    z-index: 0;
+
+}
+
+#FormS .Buttons {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: var(--container1dec-color);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}
+
+#FormS .Buttons-2 {
+    position: relative;
+    height: 60px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+#FormS .Buttons-3 {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#FormS .Legend1 {
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 4;
+    width: fit-content;
+    background-color: rgba(232, 232, 232, 1);
+    border: 2px solid black;
+    height: fit-content;
+    left: 15%;
+    border-radius: 5px;
+    display: none;
+    user-select: none;
+}
+
+#FormS .Legend2 {
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 5;
+    width: fit-content;
+    background-color: rgba(232, 232, 232, 1);
+    border: 2px solid black;
+    height: fit-content;
+    right: 15%;
+    border-radius: 5px;
+    display: none;
+    user-select: none;
+}
+
+
+#FormS .container2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#FormS .container2 span {
+    margin-right: 10px;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-shadow: 0px 0px 2px var(--shadows-color);
+}
+
+#FormS .container2 table {
+    margin: 0;
+}
+
+#FormS .container2 table tr td {
+    padding: 5px;
+}
+
+#FormS .container3 {
+    padding: 2px 10px;
+    width: 100%;
+    height: 61.5vh;
+    overflow: auto;
+}
+
+#FormS .container3 input[id="arrivoInput"],
+#FormS .container3 input[id="prioritaInput"],
+#FormS .container3 input[id="durataInput"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+    text-align: center;
+    border: none;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    background-color: var(--inputmod-color);
+}
+
+#FormS .container3 input[id="arrivoInput"]:focus,
+#FormS .container3 input[id="prioritaInput"]:focus,
+#FormS .container3 input[id="durataInput"]:focus {
+    outline: none;
+    border: none;
+}
+
+#FormS .container3 input[type="number"]::-webkit-inner-spin-button,
+#FormS .container3 input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#FormS .container3 .modify {
+    all: unset;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+
+}
+
+#FormS .container3 .modify:hover {
+    text-shadow: 0px 0px 10px var(--shadows-color);
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+#FormS .container3 .Tavoloprocessi td {
+    background-color: var(--tabletd-color);
+}
+
+#FormS .container3 .Tavoloprocessi .mod-td {
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding-right: 20px;
+    background-color: var(--section1-color);
+}
+
+
+#FormS .container3 .Tavoloprocessi .mod-th {
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    padding-right: 20px;
+    background-color: var(--section1-color);
+}
+
+
+
+
+
+
+
+#FormS .Tavoloprocessi {
+    width: fit-content;
+    border-collapse: collapse;
+
+}
+
+#FormS .Tavoloprocessi th,
+td {
+    border: 2.5px solid var(--border-color);
+    text-align: center;
+    padding: 8px;
+    color: var(--headings-color);
+
+}
+
+#FormS .Tavoloprocessi th {
+    background-color: var(--tableth-color);
+}
+
+#FormS .container3 .Tavoloprocessi td[class="colored-tile"] {
+    background-color: var(--coloredtd-color);
+}
+
+
+#FormS .Tabella {
+
+    padding: 10px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 72px;
+}

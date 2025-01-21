@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="images/logos/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<html>
+
+<html>
+
+<section id="header">
+    <div class="headerleft">
+        <img src="images/logos/logo.png" class="logo" id="logo">
+        <h3> Scheduler </h3>
+    </div>
+    <div>
+        <ul id="navbar">
+
+            <li><span><a class="active" href="https://github.com/PizzaRevolutions/Scheduler-Simulator/tree/main"><i
+                        class="fa-brands fa-github" ></i> GitHub</a></span>
+            </li>
+            <li>
+                <div class="Profili">
+                    <img src="images/pfps/Salvo Lombardo.png" class="pfp" id="Salvatore">
+                    <span id="Enricos" class="nome"><a href="https://github.com/Xrick777">Enrico Giuffrida</a></span>
+                    <span class="devs" id="Enricos">Worked on: <i class="fa-brands fa-html5"
+                            style="color: #b30000;"></i>
+                        <i class="fa-brands fa-css3-alt" style="color: #1f72b2;"></i>
+                        <i class="fa-brands fa-square-js" style="color: #d9b226;"></i>
+                    </span>
+                    <span id="Salvatore" class="nome"><a href="https://github.com/PizzaRevolutions">Salvatore
+                            Lombardo</a></span>
+                    <span class="devs" id="Salvatore">Worked on: <i class="fa-brands fa-html5"
+                            style="color: #b30000;"></i>
+                        <i class="fa-brands fa-square-js" style="color: #d9b226;"></i>
+                    </span>
+                    <img src="images/pfps/Enrico Giuffrida.png" class="pfp" id="Enrico">
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox" onchange="darkmode()">
+                    <label for="checkbox" class="checkbox-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <span class="ball"></span>
+                    </label>
+                </div>
+            </li>
+
+    </div>
+</section>
+
+<section id="FormS">
+    <h2><i class="fa-solid fa-clock"></i> Scheduler</h2>
+    <p>Here you can simulate how CS algorithms works, by putting random stuff. Enjoy!</p>
+
+
+    <div class="Workspace">
+        <div class="container">
+            <img src="images/objects/banner.png" class="banner">
+            <div class="Title">
+                <span class="Title-container">Bench</span>
+            </div>
+            <label for="numeroProcessi">Number of process:</label>
+            <input type="number" id="numeroProcessi" value="15">
+            <label for="arrivoMassimo">Max Arrive:</label>
+            <input type="number" id="arrivoMassimo" value="10">
+
+            <label for="durataMassima">Max Duration:</label>
+            <input type="number" id="durataMassima" value="10">
+
+            <label for="quantodiTempo" id="quantodiTempo-label">Quantum:</label>
+            <input type="number" id="quantodiTempo" value="2">
+
+            <label for="Clockspeed">Clock:</label>
+            <input type="number" id="Clockspeed" value="1000">
+
+            <label for="Priorita" id="Priorita-label">Max Priority:</label>
+            <input type="number" id="Priorita" value="10">
+
+
+            <label for="Tipodialgoritmo" id="Tipodialgoritmo-label">Algorithm type:</label>
+            <select name="Tipodialgoritmo" id="Tipodialgoritmo" onchange="modifyed()">
+                <option value="round robin">Round Robin</option>
+                <option value="FCFS">FCFS</option>
+                <option value="priorita">Priority</option>
+                <option value="SRTF">SRTF</option>
+            </select>
+
+            <label for="preemtive" id="preemtive-label">Preemtive:</label>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="check-24 preemtive">
+                <div class="sphere" id="sphere"></div>
+                <span class="check" id="check"><i class="fa-solid fa-check"></i></span>
+            </div>
+
+
+
+            <div class="Buttons">
+
+                <div class="Buttons-2">
+                    <button class="Creation" onclick="addProcesses()" id="Sx-button"> <i class="fa-solid fa-plus"
+                            style="color: #ffffff;"></i></button>
+                    <button class="Start" onclick="startSimulation()" id="Center-button"> <i class="fa-solid fa-play"
+                            style="color: #ffffff;"></i></button>
+                    <button class="Stop" onclick="deleteSimulation()" id="Dx-button"> <i class="fa-solid fa-trash"
+                            style="color: #ffffff;"></i></button>
+                </div>
+                <div class="Buttons-3">
+                    <button class="Alert" onclick="ShowLegend2()">
+                        <i class="fa-solid fa-triangle-exclamation" ></i>
+                    </button>
+                    <button class="Sliders" onclick="ShowLegend1()">
+                        <i class="fa-solid fa-sliders" ></i>
+                    </button>
+                </div>
+            
+                <div class="Legend2">
+                    <span style="color: rgb(230, 0, 0); font-weight: bold;">Warning:</span>
+                    <span>Too high values to the bench attributes may slow down the site or in some cases it may become unresponsive. It's up to you!</span>
+                </div>
+            
+                <div class="Legend1">
+                    <span>Developers are too lazy to<br>put options, sorry 🥱</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="Coda" class="container2">
+
+            <span for="Coda">Queue:</span>
+        </div>
+
+        <div id="Processi" class="Processi container3">
+            
+            <table class="Tavoloprocessi"></table>
+        </div>
+
+
+        <div class="Tabella">
+
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="script.js"></script>
+
+</html>
