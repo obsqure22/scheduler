@@ -3,7 +3,7 @@ let logo = document.getElementById("logo");
 let pfpE = document.getElementById("Enrico");
 let pfpS = document.getElementById("Salvatore");
 let button = document.getElementById("checkbox");
-if (Cookies.get('theme') === 'dark') {
+/* if (Cookies.get('theme') === 'dark') {
     document.body.classList.add('dark-theme');
     logo.src = "images/logos/logo-d.png";
     Cookies.set('theme', 'dark');
@@ -58,7 +58,7 @@ function ShowLegend1() {
     }
 }
 
-
+*/
 
 
 // Global variables
